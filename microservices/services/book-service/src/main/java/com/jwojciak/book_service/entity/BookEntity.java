@@ -33,7 +33,7 @@ public class BookEntity {
     private String isbn;
 
     @Basic
-    @Column(name = "isbn")
+    @Column(name = "title")
     private String title;
 
     @Basic

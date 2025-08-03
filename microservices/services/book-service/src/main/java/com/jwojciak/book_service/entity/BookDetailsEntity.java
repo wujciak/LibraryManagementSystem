@@ -34,11 +34,11 @@ public class BookDetailsEntity {
     private String genre;
 
     @Basic
-    @Column(name = "genre")
+    @Column(name = "summary")
     private String summary;
 
     @Basic
-    @Column(name = "genre")
+    @Column(name = "cover_image_url")
     private String coverImageUrl;
 
     @OneToOne
