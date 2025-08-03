@@ -7,7 +7,6 @@ import edu.ib.technologiesieciowe.service.BookService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +23,6 @@ public class BookController {
     private final ModelMapper modelMapper;
     private final BookService bookService;
 
-    @Autowired
     public BookController(BookService bookService, ModelMapper modelMapper) {
         this.bookService = bookService;
         this.modelMapper = modelMapper;

@@ -1,20 +1,19 @@
 package edu.ib.technologiesieciowe.service;
 
+import org.springframework.stereotype.Service;
+
 import edu.ib.technologiesieciowe.dto.UserDTOs.UserDTO;
 import edu.ib.technologiesieciowe.exception.EntityNotFoundException;
 import edu.ib.technologiesieciowe.model.Auth;
 import edu.ib.technologiesieciowe.model.User;
 import edu.ib.technologiesieciowe.repository.AuthRepository;
 import edu.ib.technologiesieciowe.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
     private final UserRepository userRepository;
     private final AuthRepository authRepository;
 
-    @Autowired
     public UserService(UserRepository userRepository, AuthRepository authRepository) {
         this.userRepository = userRepository;
         this.authRepository = authRepository;

@@ -3,7 +3,6 @@ package edu.ib.technologiesieciowe.service;
 import edu.ib.technologiesieciowe.exception.EntityNotFoundException;
 import edu.ib.technologiesieciowe.model.Book;
 import edu.ib.technologiesieciowe.repository.BookRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,7 +11,6 @@ import java.util.List;
 public class BookService {
     private final BookRepository bookRepository;
 
-    @Autowired
     public BookService(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }

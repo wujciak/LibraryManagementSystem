@@ -11,7 +11,7 @@ public class UserAlreadyExistsException extends RuntimeException{
 
     public static ResponseStatusException create(String username) {
         UserAlreadyExistsException exception =
-                new UserAlreadyExistsException(String.format("User with username: %s already exists.", username));
+                new UserAlreadyExistsException("User with username: %s already exists.".formatted(username));
         return new ResponseStatusException(HttpStatus.CONFLICT, exception.getMessage(), exception);
     }
 }

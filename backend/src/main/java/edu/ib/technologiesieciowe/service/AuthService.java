@@ -11,7 +11,7 @@ import edu.ib.technologiesieciowe.model.Auth;
 import edu.ib.technologiesieciowe.model.User;
 import edu.ib.technologiesieciowe.repository.AuthRepository;
 import edu.ib.technologiesieciowe.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,7 +25,6 @@ public class AuthService {
     private final JwtService jwtService;
     private final PasswordEncoder passwordEncoder;
 
-    @Autowired
     public AuthService(AuthRepository authRepository, UserRepository userRepository, JwtService jwtService, PasswordEncoder passwordEncoder) {
         this.authRepository = authRepository;
         this.userRepository = userRepository;

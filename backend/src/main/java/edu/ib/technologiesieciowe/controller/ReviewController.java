@@ -7,7 +7,6 @@ import edu.ib.technologiesieciowe.service.ReviewService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +23,6 @@ public class ReviewController {
     private final ReviewService reviewService;
     private final ModelMapper modelMapper;
 
-    @Autowired
     public ReviewController(ReviewService reviewService, ModelMapper modelMapper) {
         this.reviewService = reviewService;
         this.modelMapper = modelMapper;

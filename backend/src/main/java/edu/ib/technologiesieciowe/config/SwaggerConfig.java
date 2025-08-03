@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SwaggerConfig {
     @Bean
-    public OpenAPI customOpenApi() {
+    OpenAPI customOpenApi() {
         return new OpenAPI()
                 .info(new Info().title("Library API").version("0.1.0"))
                 .addSecurityItem(new SecurityRequirement().addList("bearerAuth"))

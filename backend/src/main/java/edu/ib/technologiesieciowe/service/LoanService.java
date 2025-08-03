@@ -1,17 +1,16 @@
 package edu.ib.technologiesieciowe.service;
 
+import org.springframework.stereotype.Service;
+
 import edu.ib.technologiesieciowe.enumType.UserRole;
 import edu.ib.technologiesieciowe.exception.EntityNotFoundException;
 import edu.ib.technologiesieciowe.model.Loan;
 import edu.ib.technologiesieciowe.repository.LoanRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 @Service
 public class LoanService {
     private final LoanRepository loanRepository;
 
-    @Autowired
     public LoanService(LoanRepository loanRepository) {
         this.loanRepository = loanRepository;
     }
